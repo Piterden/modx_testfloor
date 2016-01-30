@@ -1,0 +1,54 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '0c20becc12b8df1438e1272a87761005' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"MIGXfe","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"return include $modx->getOption(\'migxfe.core_path\',null,$modx->getOption(\'core_path\').\'components\\/migxfe\\/elements\\/snippets\\/\').\'migxfe.php\';","locked":0,"properties":"","moduleguid":"","static":0,"static_file":"","content":"return include $modx->getOption(\'migxfe.core_path\',null,$modx->getOption(\'core_path\').\'components\\/migxfe\\/elements\\/snippets\\/\').\'migxfe.php\';"}',
+        'guid' => 'fddca18bc8f2ecc1f8ba6d4577d83eea',
+        'native_key' => 1,
+        'signature' => '383d29e8e9185acda53123f224151923',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'migxfe',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"migxfe-1.0.0-alpha4\\/modCategory\\/0cf1fd2e2676ce520cd8301f706a498b\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"migxfe"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"migxfe-1.0.0-alpha4\\/modCategory\\/0cf1fd2e2676ce520cd8301f706a498b\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"migxfe"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '718d532698f0d544517aa46ec925bbe8',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '0cf1fd2e2676ce520cd8301f706a498b',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"MIGXfe"}',
+);

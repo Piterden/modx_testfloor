@@ -1,0 +1,7 @@
+.regpay-resource-body{padding:10px
+0 10px 20px}.regpay-grid .regpay-unpublished,
+.regpay-grid .regpay-unpublished span,
+.regpay-grid .regpay-unpublished
+a{color:gray}.x-grid3-body .x-grid3-td-checker{background-image:none !important}.regpay-deleted, .regpay-deleted span, .regpay-deleted a,
+.regpay-grid .regpay-deleted, .regpay-grid .regpay-deleted span, .regpay-grid .regpay-deleted
+a{color:red !important}

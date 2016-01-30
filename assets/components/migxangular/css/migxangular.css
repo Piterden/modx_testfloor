@@ -1,0 +1,30 @@
+
+#ma-maintoolbar {
+    text-align: left;
+}
+
+.livesearchitems {
+    
+}
+
+.livesearchitem-content {
+    border: 1px solid #DDDDDD;
+    padding: 10px;   
+}
+
+.livesearchitem-content.active{
+    background-color: #EFEFEF;
+}
+
+.livesearchitem {
+    
+}
+
+.datetimepicker {
+    width: 230px;
+}
+
+.modal-dialog {
+    text-align: left;
+}
+

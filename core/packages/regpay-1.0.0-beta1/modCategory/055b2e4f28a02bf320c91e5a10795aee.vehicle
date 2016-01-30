@@ -1,0 +1,42 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => true,
+  'abort_install_on_vehicle_fail' => true,
+  'namespace' => 'regpay',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"regpay-1.0.0-beta1\\/modCategory\\/055b2e4f28a02bf320c91e5a10795aee\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"regpay"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"regpay-1.0.0-beta1\\/modCategory\\/055b2e4f28a02bf320c91e5a10795aee\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"regpay"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"regpay-1.0.0-beta1\\/modCategory\\/055b2e4f28a02bf320c91e5a10795aee.regpay.resolver.resolver","type":"php","name":"regpay.resolver"}',
+    ),
+  ),
+  'validate' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"regpay-1.0.0-beta1\\/modCategory\\/055b2e4f28a02bf320c91e5a10795aee.regpay.validator.validator","type":"php","name":"regpay.validator"}',
+    ),
+  ),
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f70915263f9fc3839c25a49eb8007e73',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '055b2e4f28a02bf320c91e5a10795aee',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"RegPay","rank":0}',
+);

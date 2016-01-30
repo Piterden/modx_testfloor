@@ -1,0 +1,156 @@
+.ace-webexpert .ace_gutter {
+  background: #2D2D2D;
+  color: rgb(125,125,125)
+}
+
+.ace-webexpert .ace_print-margin {
+  width: 1px;
+  background: #e8e8e8
+}
+
+.ace-webexpert {
+  background-color: #2D2D2D;
+  color: #CCCCCC
+}
+
+.ace-webexpert .ace_cursor {
+  color: #CCCCCC
+}
+
+.ace-webexpert .ace_marker-layer .ace_selection {
+  background: #515151
+}
+
+.ace-webexpert.ace_multiselect .ace_selection.ace_start {
+  box-shadow: 0 0 3px 0px #2D2D2D;
+  border-radius: 2px
+}
+
+.ace-webexpert .ace_marker-layer .ace_step {
+  background: rgb(198, 219, 174)
+}
+
+.ace-webexpert .ace_marker-layer .ace_bracket {
+  margin: -1px 0 0 -1px;
+  border: 1px solid #6A6A6A
+}
+
+.ace-webexpert .ace_marker-layer .ace_active-line {
+  background: #393939
+}
+
+.ace-webexpert .ace_gutter-active-line {
+  background-color: #393939
+}
+
+.ace-webexpert .ace_marker-layer .ace_selected-word {
+  border: 1px solid #515151
+}
+
+.ace-webexpert .ace_fold {
+  background-color: #FFFF80;
+  border-color: #CCCCCC
+}
+
+.ace-webexpert .ace_keyword {
+  color: #F29940
+}
+
+.ace-webexpert .ace_keyword.ace_operator {
+  color: #FACC7A
+}
+
+.ace-webexpert .ace_keyword.ace_other.ace_unit {
+  color: #ECAB84
+}
+
+.ace-webexpert .ace_constant.ace_language {
+  color: #ECAB84
+}
+
+.ace-webexpert .ace_constant.ace_numeric {
+  color: #ECAB84
+}
+
+.ace-webexpert .ace_constant.ace_character {
+  color: #ECAB84
+}
+
+.ace-webexpert .ace_constant.ace_other {
+  color: #CCCCCC
+}
+
+.ace-webexpert .ace_support.ace_function {
+  color: #FFFF80
+}
+
+.ace-webexpert .ace_support.ace_constant {
+  font-style: italic;
+  color: #DCE6A4
+}
+
+.ace-webexpert .ace_support.ace_class {
+  color: #FFCC66
+}
+
+.ace-webexpert .ace_support.ace_type {
+  color: #FFCC66
+}
+
+.ace-webexpert .ace_storage {
+  color: #F29940
+}
+
+.ace-webexpert .ace_storage.ace_type {
+  color: #F29940
+}
+
+.ace-webexpert .ace_invalid {
+  color: #CDCDCD;
+  background-color: #F2777A
+}
+
+.ace-webexpert .ace_invalid.ace_deprecated {
+  color: #CDCDCD;
+  background-color: #CC99CC
+}
+
+.ace-webexpert .ace_string {
+  color: #84C2FF
+}
+
+.ace-webexpert .ace_string.ace_regexp {
+  color: #8080FF
+}
+
+.ace-webexpert .ace_comment {
+  color: #999999
+}
+
+.ace-webexpert .ace_variable {
+  color: #ACFFAE
+}
+
+.ace-webexpert .ace_meta.ace_tag {
+  color: #F2777A
+}
+
+.ace-webexpert .ace_entity.ace_other.ace_attribute-name {
+  color: #BD5759
+}
+
+.ace-webexpert .ace_entity.ace_name.ace_function {
+  color: #FFFF80
+}
+
+.ace-webexpert .ace_entity.ace_name {
+  color: #FFCC66
+}
+
+.ace-webexpert .ace_entity.ace_name.ace_tag {
+  color: #F2777A
+}
+
+.ace-webexpert .ace_markup.ace_heading {
+  color: #84C2FF
+}

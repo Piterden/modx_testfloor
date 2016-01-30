@@ -1,0 +1,54 @@
+<?php return array (
+  'preserve_keys' => false,
+  'update_object' => true,
+  'unique_key' => 'name',
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      '33861a57a843358db79a445d4aed154a' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":1,"event":"OnWebPagePrerender","priority":0,"propertyset":0}',
+        'guid' => '938cd5e4261e7d8246da869a8d5c2eb5',
+        'native_key' => 
+        array (
+          0 => 1,
+          1 => 'OnWebPagePrerender',
+        ),
+        'signature' => 'd965e895f5fbe90b1aa6cf8dcb4b9372',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'obfuscateemailrevo',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '3dbecd0f9a58ef15e49869b2ea5dbb52',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => '797b1f6edea6bd198fdc761e17cab163',
+  'native_key' => 1,
+  'object' => '{"id":1,"source":1,"property_preprocess":0,"name":"ObfuscateEmail","description":"Obliterates e-mail address while leaving them usable","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * ObfuscateEmail plugin for MODx.\\n * By Aloysius Lim.\\n *\\n * Version 0.9.2 (Jun 03, 2011) by W. Shawn Wilkerson\\n * Updated Snippet to be compliant with changes in Revolution 2.1\\n *\\n * Version: 0.9.1 (Apr 15, 2007)\\n *\\n * This plugin searches for all email addresses and \\"mailto:\\" strings in the\\n * html output, both inside and outside href attributes. In other words, it also\\n * encodes link text.\\n *\\n * It can find all common email addresses as specified by RFC2822, including all\\n * unusual but allowed characters. Any email addresses that satisfy the\\n * the construct below will be detected:\\n *\\n * The plugin than randomly leaves 10% of the characters alone, encodes 45% of\\n * them in decimal, and 45% of them in hexadecimal.\\n *\\n * Changelog:\\n * Version 0.9.1 (Apr 15, 2007)\\n * Fixed: Regex for atom allowed empty string.\\n *\\n * Version 0.9.0 (Mar 16, 2007)\\n * Original release.\\n **\\/\\n\\nfunction email_regex()\\n{\\n    \\/* Set up email regex that partially conforms to RFC2822\\n    * (the ignored parts are indicated):\\n    *\\n    * addr-spec       =       local-part \\"@\\" domain\\n    *\\n    * local-part      =       dot-atom\\n    *                         \\/ quoted-string              \\/\\/ Ignored\\n    *                         \\/ obs-local-part             \\/\\/ Ignored\\n    *\\n    * domain          =       dot-atom\\n    *                         \\/ domain-literal             \\/\\/ Ignored\\n    *                         \\/ obs-domain                 \\/\\/ Ignored\\n    *\\n    * dot-atom        =       [CFWS] dot-atom-text [CFWS]  \\/\\/ Ignored CFWS\\n    *\\n    * dot-atom-text   =       1*atext *(\\".\\" 1*atext)\\n    * atext           =       ALPHA \\/ DIGIT \\/ ; Any character except controls,\\n    *                         \\"!\\" \\/ \\"#\\" \\/     ;  SP, and specials.\\n    *                         \\"$\\" \\/ \\"%\\" \\/     ;  Used for atoms\\n    *                         \\"&\\" \\/ \\"\'\\" \\/\\n    *                         \\"*\\" \\/ \\"+\\" \\/\\n    *                         \\"-\\" \\/ \\"\\/\\" \\/\\n    *                         \\"=\\" \\/ \\"?\\" \\/\\n    *                         \\"^\\" \\/ \\"_\\" \\/\\n    *                         \\"`\\" \\/ \\"{\\" \\/\\n    *                         \\"|\\" \\/ \\"}\\" \\/\\n    *                         \\"~\\"\\n    *\\/\\n\\n    $atom = \\"[-!#$%&\'*+\\/=?^_`{|}~0-9A-Za-z]+\\";\\n    $email_half = $atom . \'(?:\\\\\\\\.\' . $atom . \')*\';\\n    $email = $email_half . \'@\' . $email_half;\\n    $email_regex = \'<(\' . $email . \')>\';\\n    return $email_regex;\\n}\\n\\nfunction replaceEntities($matches)\\n{\\n    $address = html_entity_decode($matches[1]);\\n    $replaced = \'\';\\n\\n    for ($i = 0; $i < strlen($address); $i++) {\\n        $char = $address[$i];\\n        $r = rand(0, 100);\\n\\n        # roughly 10% raw, 45% hex, 45% dec\\n        if ($r > 90) {\\n            $replaced .= $char;\\n        }\\n        else if ($r < 45) {\\n            $replaced .= \'&#x\' . dechex(ord($char)) . \';\';\\n        }\\n        else\\n        {\\n            $replaced .= \'&#\' . ord($char) . \';\';\\n        }\\n    }\\n\\n    return $replaced;\\n}\\n\\n$output = &$modx->resource->_output;\\n$output = preg_replace_callback(email_regex(), \\"replaceEntities\\", $output);\\n$output = preg_replace_callback(\'\\/(mailto:)\\/\', \\"replaceEntities\\", $output);","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * ObfuscateEmail plugin for MODx.\\n * By Aloysius Lim.\\n *\\n * Version 0.9.2 (Jun 03, 2011) by W. Shawn Wilkerson\\n * Updated Snippet to be compliant with changes in Revolution 2.1\\n *\\n * Version: 0.9.1 (Apr 15, 2007)\\n *\\n * This plugin searches for all email addresses and \\"mailto:\\" strings in the\\n * html output, both inside and outside href attributes. In other words, it also\\n * encodes link text.\\n *\\n * It can find all common email addresses as specified by RFC2822, including all\\n * unusual but allowed characters. Any email addresses that satisfy the\\n * the construct below will be detected:\\n *\\n * The plugin than randomly leaves 10% of the characters alone, encodes 45% of\\n * them in decimal, and 45% of them in hexadecimal.\\n *\\n * Changelog:\\n * Version 0.9.1 (Apr 15, 2007)\\n * Fixed: Regex for atom allowed empty string.\\n *\\n * Version 0.9.0 (Mar 16, 2007)\\n * Original release.\\n **\\/\\n\\nfunction email_regex()\\n{\\n    \\/* Set up email regex that partially conforms to RFC2822\\n    * (the ignored parts are indicated):\\n    *\\n    * addr-spec       =       local-part \\"@\\" domain\\n    *\\n    * local-part      =       dot-atom\\n    *                         \\/ quoted-string              \\/\\/ Ignored\\n    *                         \\/ obs-local-part             \\/\\/ Ignored\\n    *\\n    * domain          =       dot-atom\\n    *                         \\/ domain-literal             \\/\\/ Ignored\\n    *                         \\/ obs-domain                 \\/\\/ Ignored\\n    *\\n    * dot-atom        =       [CFWS] dot-atom-text [CFWS]  \\/\\/ Ignored CFWS\\n    *\\n    * dot-atom-text   =       1*atext *(\\".\\" 1*atext)\\n    * atext           =       ALPHA \\/ DIGIT \\/ ; Any character except controls,\\n    *                         \\"!\\" \\/ \\"#\\" \\/     ;  SP, and specials.\\n    *                         \\"$\\" \\/ \\"%\\" \\/     ;  Used for atoms\\n    *                         \\"&\\" \\/ \\"\'\\" \\/\\n    *                         \\"*\\" \\/ \\"+\\" \\/\\n    *                         \\"-\\" \\/ \\"\\/\\" \\/\\n    *                         \\"=\\" \\/ \\"?\\" \\/\\n    *                         \\"^\\" \\/ \\"_\\" \\/\\n    *                         \\"`\\" \\/ \\"{\\" \\/\\n    *                         \\"|\\" \\/ \\"}\\" \\/\\n    *                         \\"~\\"\\n    *\\/\\n\\n    $atom = \\"[-!#$%&\'*+\\/=?^_`{|}~0-9A-Za-z]+\\";\\n    $email_half = $atom . \'(?:\\\\\\\\.\' . $atom . \')*\';\\n    $email = $email_half . \'@\' . $email_half;\\n    $email_regex = \'<(\' . $email . \')>\';\\n    return $email_regex;\\n}\\n\\nfunction replaceEntities($matches)\\n{\\n    $address = html_entity_decode($matches[1]);\\n    $replaced = \'\';\\n\\n    for ($i = 0; $i < strlen($address); $i++) {\\n        $char = $address[$i];\\n        $r = rand(0, 100);\\n\\n        # roughly 10% raw, 45% hex, 45% dec\\n        if ($r > 90) {\\n            $replaced .= $char;\\n        }\\n        else if ($r < 45) {\\n            $replaced .= \'&#x\' . dechex(ord($char)) . \';\';\\n        }\\n        else\\n        {\\n            $replaced .= \'&#\' . ord($char) . \';\';\\n        }\\n    }\\n\\n    return $replaced;\\n}\\n\\n$output = &$modx->resource->_output;\\n$output = preg_replace_callback(email_regex(), \\"replaceEntities\\", $output);\\n$output = preg_replace_callback(\'\\/(mailto:)\\/\', \\"replaceEntities\\", $output);"}',
+);

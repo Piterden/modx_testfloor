@@ -1,0 +1,1 @@
+Ext.onReady(function(){MODx.load({xtype:'regpay-page-home'});});regpay.page.Home=function(config){config=config||{};Ext.applyIf(config,{components:[{xtype:'regpay-panel-home',renderTo:'regpay-panel-home-div'}]});regpay.page.Home.superclass.constructor.call(this,config);};Ext.extend(regpay.page.Home,MODx.Component);Ext.reg('regpay-page-home',regpay.page.Home);

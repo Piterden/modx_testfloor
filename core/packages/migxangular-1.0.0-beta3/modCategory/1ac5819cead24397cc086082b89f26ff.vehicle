@@ -1,0 +1,54 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '5dd59bca4845807cb0a2fffc02e73d44' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"MIGXangular","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"return include $modx->getOption(\'migxangular.core_path\',null,$modx->getOption(\'core_path\').\'components\\/migxangular\\/elements\\/snippets\\/\').\'migxangular.php\';","locked":0,"properties":"","moduleguid":"","static":0,"static_file":"","content":"return include $modx->getOption(\'migxangular.core_path\',null,$modx->getOption(\'core_path\').\'components\\/migxangular\\/elements\\/snippets\\/\').\'migxangular.php\';"}',
+        'guid' => '9c6a97b4dfbcccdb4057250efd5a9b7e',
+        'native_key' => 1,
+        'signature' => '831b85da7da06871807c213cb3401187',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'migxangular',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"migxangular-1.0.0-beta3\\/modCategory\\/1ac5819cead24397cc086082b89f26ff\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"migxangular"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"migxangular-1.0.0-beta3\\/modCategory\\/1ac5819cead24397cc086082b89f26ff\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"migxangular"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '484531b17acecee02a4d1156747b5051',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '1ac5819cead24397cc086082b89f26ff',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"MIGXangular"}',
+);

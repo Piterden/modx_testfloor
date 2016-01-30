@@ -1,0 +1,28 @@
+<input id="tv[[+tv.id]]" name="tv[[+tv.id]]"
+	type="text" class="textfield"
+	value="[[+tv.value]]"
+	[[+style]]
+	tvtype="[[+tv.type]]"
+/>
+
+<script type="text/javascript">
+// <![CDATA[
+/*
+Ext.onReady(function() {
+    var fld = MODx.load({
+        xtype: 'textfield'
+        ,applyTo: 'tv[[+tv.id]]'
+        ,width: '99%'
+        ,enableKeyEvents: true
+        ,msgTarget: 'under'
+        ,allowBlank: [[+params.allowBlank:is=`1`:then=`true`:else=`false`]] 
+        [[+params.maxLength:isnot=``:then=`,maxLength:[[+params.maxLength]]`:else=``]]
+        [[+params.minLength:isnot=``:then=`,minLength:[[+params.maxLength]]`:else=``]]  
+        ,listeners: { 'keydown': { fn:MODx.fireResourceFormChange, scope:this}}
+    });
+    Ext.getCmp('modx-panel-resource').getForm().add(fld);
+    MODx.makeDroppable(fld);
+});
+*/
+// ]]>
+</script>

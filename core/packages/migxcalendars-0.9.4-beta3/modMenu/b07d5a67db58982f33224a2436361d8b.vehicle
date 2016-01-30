@@ -1,0 +1,57 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      'fbf4d584f61ccccd17040fbbf1ef59e0' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":1,"namespace":"migx","controller":"index","haslayout":0,"lang_topics":"example:default","assets":"","help_url":""}',
+        'guid' => '54fe0ad5ce48e814c382b03d97284aaa',
+        'native_key' => 1,
+        'signature' => '6c455bd2accdfc2a17dd93e6ba532d48',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'migxcalendars',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"migxcalendars-0.9.4-beta3\\/modMenu\\/b07d5a67db58982f33224a2436361d8b.resolve.menues.resolver","type":"php","name":"resolve.menues"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd3b84a259b97c9b266defdfaf05152a8',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => 'b07d5a67db58982f33224a2436361d8b',
+  'native_key' => 'migxCalendars',
+  'object' => '{"text":"migxCalendars","parent":"","action":1,"description":"","icon":"","menuindex":0,"params":"&configs=migxcalendar_events,migxcalendars||migxcalendar_categories,migxcalendars","handler":"","permissions":"","namespace":"core"}',
+);

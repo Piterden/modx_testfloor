@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      'c0e677ee31165b75aab436dff54fac7a' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":1,"namespace":"regpay","controller":"index","haslayout":1,"lang_topics":"regpay:default","assets":"","help_url":""}',
+        'guid' => '0bcd40ff29e01ac135b1438e2218b34e',
+        'native_key' => 1,
+        'signature' => '2c551811ea8951504e17d5b6741211c5',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'regpay',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'aec66a900ecbce85499a9491edc9496a',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '2ebcbdf23c7be422234560c857f45e2a',
+  'native_key' => 'regpay',
+  'object' => '{"text":"regpay","parent":"components","action":1,"description":"ex_menu_desc","icon":"","menuindex":0,"params":"","handler":"","permissions":"","namespace":"regpay","id":1}',
+);

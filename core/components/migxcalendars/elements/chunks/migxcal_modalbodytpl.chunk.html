@@ -1,0 +1,10 @@
+<strong>[[%migxcal.start]]:</strong> [[+startdate:strtotime:date=`%d.%m.%Y %H:%M`]] <br />
+<strong>[[%migxcal.end]]:</strong> [[+enddate:strtotime:date=`%d.%m.%Y %H:%M`]] <br />
+<br /><br />
+[[+Event_description]] 
+<br /><br />
+[[+description]]
+<br /><br />
+[[+detail_id:isnot=``:then=`
+<a href="[[[[+detail_id:isnot=``:then=`~[[+detail_id]]? &date_id=`[[+id]]``:else=``]]]]">Details</a>
+`:else=``]]
